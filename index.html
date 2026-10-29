@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse everyday finds at ShopHub.">
+  <title>ShopHub | Discover something good</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="#" aria-label="ShopHub home">shop<span>hub</span></a>
+      <button class="delivery" id="delivery-location" type="button" aria-label="Detect your location for delivery">
+        <span class="delivery-icon" aria-hidden="true">⌖</span>
+        <span><small>Delivering to</small><strong id="delivery-label">Your location</strong><small class="delivery-status" id="delivery-status" role="status" aria-live="polite">Tap to detect location</small></span>
+      </button>
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="search-input">Search products</label>
+        <select aria-label="Product category">
+          <option value="All">All categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Home &amp; Kitchen">Home &amp; Kitchen</option>
+          <option value="Home &amp; Office">Home &amp; Office</option>
+          <option value="Bags &amp; Travel">Bags &amp; Travel</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Books">Books</option>
+          <option value="Sports &amp; Outdoors">Sports &amp; Outdoors</option>
+          <option value="Beauty &amp; Personal Care">Beauty &amp; Personal Care</option>
+          <option value="Toys &amp; Games">Toys &amp; Games</option>
+          <option value="Pet Supplies">Pet Supplies</option>
+        </select>
+        <input id="search-input" type="search" placeholder="Search ShopHub">
+        <button type="submit" aria-label="Search">⌕</button>
+      </form>
+      <button class="header-link account" id="account-button" type="button" aria-haspopup="dialog"><small id="account-greeting">Hello, sign in</small><strong>Account &amp; Lists</strong></button>
+      <button class="header-link orders" id="orders-button" type="button" aria-haspopup="dialog"><small>Returns</small><strong>&amp; Orders</strong></button>
+      <button class="cart-button" id="cart-button" type="button" aria-label="Shopping cart" aria-haspopup="dialog">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+        <strong>Cart</strong>
+      </button>
+    </div>
+    <nav class="category-nav" aria-label="Main navigation">
+      <a href="#deals">Today's Deals</a>
+      <a href="#products">Electronics</a>
+      <a href="#products">Home &amp; Kitchen</a>
+      <a href="#products">Fashion</a>
+      <a href="#products">Books</a>
+      <a href="#products">New arrivals</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="deals">
+      <div class="hero-copy">
+        <span class="eyebrow">A little something for everyone</span>
+        <h1>Find your next<br>everyday favorite.</h1>
+        <p>Good finds, great prices, and a little inspiration for wherever life takes you.</p>
+        <a class="hero-button" href="#products">Explore the picks <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-box">✦</div>
+        <div class="hero-sparkle sparkle-one">✦</div>
+        <div class="hero-sparkle sparkle-two">✧</div>
+      </div>
+      <div class="hero-pagination"><span class="active"></span><span></span><span></span></div>
+    </section>
+
+    <section class="benefits" aria-label="Shopping benefits">
+      <div><span class="benefit-icon">✦</span><span><strong>Everyday value</strong><small>Prices you'll love</small></span></div>
+      <div><span class="benefit-icon">↗</span><span><strong>Fresh discoveries</strong><small>New things, often</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Made for you</strong><small>Find your favorites</small></span></div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Picked for you</span>
+          <h2>Popular right now</h2>
+        </div>
+        <a href="#products" class="view-all">See all <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-name="wireless headphones">
+          <div class="product-image lavender"><span class="product-emoji" aria-hidden="true">🎧</span><span class="badge">Bestseller</span><button class="favorite" aria-label="Save wireless headphones" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Electronics</span><h3>Wireless Studio Headphones</h3><div class="rating"><span>★★★★★</span> <small>4.8 (2,104)</small></div><div class="price-row"><strong>$49.99</strong><del>$69.99</del></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="ceramic coffee mug">
+          <div class="product-image peach"><span class="product-emoji" aria-hidden="true">☕</span><button class="favorite" aria-label="Save ceramic coffee mug" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Home &amp; Kitchen</span><h3>Everyday Ceramic Coffee Mug</h3><div class="rating"><span>★★★★★</span> <small>4.7 (846)</small></div><div class="price-row"><strong>$14.50</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="canvas backpack">
+          <div class="product-image mint"><span class="product-emoji" aria-hidden="true">🎒</span><span class="badge">Popular</span><button class="favorite" aria-label="Save canvas backpack" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Bags &amp; Travel</span><h3>Weekend Canvas Backpack</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.5 (392)</small></div><div class="price-row"><strong>$38.00</strong><del>$45.00</del></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="desk lamp">
+          <div class="product-image butter"><span class="product-emoji" aria-hidden="true">💡</span><button class="favorite" aria-label="Save desk lamp" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Home &amp; Office</span><h3>Soft Glow Adjustable Desk Lamp</h3><div class="rating"><span>★★★★★</span> <small>4.9 (517)</small></div><div class="price-row"><strong>$27.95</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="portable bluetooth speaker">
+          <div class="product-image mint"><span class="product-emoji" aria-hidden="true">🔊</span><span class="badge">Popular</span><button class="favorite" aria-label="Save portable Bluetooth speaker" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Electronics</span><h3>Portable Bluetooth Speaker</h3><div class="rating"><span>★★★★★</span> <small>4.7 (728)</small></div><div class="price-row"><strong>$32.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="wireless mouse">
+          <div class="product-image lavender"><span class="product-emoji" aria-hidden="true">🖱️</span><button class="favorite" aria-label="Save wireless mouse" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Electronics</span><h3>Compact Wireless Mouse</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.6 (411)</small></div><div class="price-row"><strong>$18.75</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="cotton throw blanket">
+          <div class="product-image peach"><span class="product-emoji" aria-hidden="true">🧶</span><button class="favorite" aria-label="Save cotton throw blanket" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Home &amp; Kitchen</span><h3>Soft Cotton Throw Blanket</h3><div class="rating"><span>★★★★★</span> <small>4.8 (306)</small></div><div class="price-row"><strong>$34.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="glass water bottle">
+          <div class="product-image mint"><span class="product-emoji" aria-hidden="true">🧴</span><button class="favorite" aria-label="Save glass water bottle" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Home &amp; Kitchen</span><h3>Everyday Glass Water Bottle</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.4 (219)</small></div><div class="price-row"><strong>$16.25</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="linen tote bag">
+          <div class="product-image butter"><span class="product-emoji" aria-hidden="true">👜</span><button class="favorite" aria-label="Save linen tote bag" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Bags &amp; Travel</span><h3>Market Day Linen Tote</h3><div class="rating"><span>★★★★★</span> <small>4.8 (183)</small></div><div class="price-row"><strong>$22.50</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="knit beanie">
+          <div class="product-image lavender"><span class="product-emoji" aria-hidden="true">🧢</span><button class="favorite" aria-label="Save knit beanie" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Fashion</span><h3>Ribbed Knit Everyday Beanie</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.5 (92)</small></div><div class="price-row"><strong>$19.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="classic sunglasses">
+          <div class="product-image peach"><span class="product-emoji" aria-hidden="true">🕶️</span><button class="favorite" aria-label="Save classic sunglasses" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Fashion</span><h3>Classic Daylight Sunglasses</h3><div class="rating"><span>★★★★★</span> <small>4.7 (264)</small></div><div class="price-row"><strong>$24.95</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="striped cotton socks">
+          <div class="product-image mint"><span class="product-emoji" aria-hidden="true">🧦</span><button class="favorite" aria-label="Save cotton socks" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Fashion</span><h3>Colorful Cotton Sock Set</h3><div class="rating"><span>★★★★★</span> <small>4.9 (138)</small></div><div class="price-row"><strong>$12.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="illustrated nature journal">
+          <div class="product-image butter"><span class="product-emoji" aria-hidden="true">📔</span><button class="favorite" aria-label="Save nature journal" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Books</span><h3>Illustrated Nature Journal</h3><div class="rating"><span>★★★★★</span> <small>4.8 (176)</small></div><div class="price-row"><strong>$15.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="creative sketchbook">
+          <div class="product-image lavender"><span class="product-emoji" aria-hidden="true">📚</span><button class="favorite" aria-label="Save creative sketchbook" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Books</span><h3>Creative Ideas Sketchbook</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.6 (203)</small></div><div class="price-row"><strong>$11.50</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="reusable yoga mat">
+          <div class="product-image mint"><span class="product-emoji" aria-hidden="true">🧘</span><span class="badge">New</span><button class="favorite" aria-label="Save reusable yoga mat" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Sports &amp; Outdoors</span><h3>Everyday Reversible Yoga Mat</h3><div class="rating"><span>★★★★★</span> <small>4.8 (315)</small></div><div class="price-row"><strong>$29.99</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="insulated picnic bottle">
+          <div class="product-image peach"><span class="product-emoji" aria-hidden="true">🥤</span><button class="favorite" aria-label="Save insulated bottle" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Sports &amp; Outdoors</span><h3>Trail Day Insulated Bottle</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.5 (147)</small></div><div class="price-row"><strong>$21.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="botanical hand cream">
+          <div class="product-image butter"><span class="product-emoji" aria-hidden="true">🧴</span><button class="favorite" aria-label="Save botanical hand cream" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Beauty &amp; Personal Care</span><h3>Botanical Hand Cream Set</h3><div class="rating"><span>★★★★★</span> <small>4.8 (261)</small></div><div class="price-row"><strong>$17.50</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="gentle face cleanser">
+          <div class="product-image lavender"><span class="product-emoji" aria-hidden="true">🫧</span><button class="favorite" aria-label="Save gentle face cleanser" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Beauty &amp; Personal Care</span><h3>Gentle Daily Face Cleanser</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.6 (189)</small></div><div class="price-row"><strong>$13.95</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="wooden building blocks">
+          <div class="product-image peach"><span class="product-emoji" aria-hidden="true">🧩</span><span class="badge">Bestseller</span><button class="favorite" aria-label="Save wooden building blocks" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Toys &amp; Games</span><h3>Colorful Wooden Building Blocks</h3><div class="rating"><span>★★★★★</span> <small>4.9 (384)</small></div><div class="price-row"><strong>$26.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="family puzzle">
+          <div class="product-image mint"><span class="product-emoji" aria-hidden="true">🧩</span><button class="favorite" aria-label="Save family puzzle" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Toys &amp; Games</span><h3>Weekend Garden 500-Piece Puzzle</h3><div class="rating"><span>★★★★★</span> <small>4.7 (212)</small></div><div class="price-row"><strong>$18.50</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+        <article class="product-card" data-name="pet treat pouch">
+          <div class="product-image butter"><span class="product-emoji" aria-hidden="true">🐾</span><button class="favorite" aria-label="Save pet treat pouch" type="button">♡</button></div>
+          <div class="product-info"><span class="product-category">Pet Supplies</span><h3>Walk-Time Treat Pouch</h3><div class="rating"><span>★★★★<span class="half-star">★</span></span> <small>4.5 (98)</small></div><div class="price-row"><strong>$16.00</strong></div><button class="add-to-cart" type="button">Add to cart</button></div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No products match your search. Try another term.</p>
+    </section>
+
+    <section class="promo">
+      <div class="promo-icon" aria-hidden="true">✷</div>
+      <div><span class="eyebrow">A good place to start</span><h2>Small upgrades. Big happy.</h2><p>Discover thoughtfully picked essentials for home, work, and everything in between.</p></div>
+      <a href="#products" class="promo-link">Shop the edit <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#">shop<span>hub</span></a>
+    <p>Good finds for everyday life.</p>
+    <small>© 2026 ShopHub. A demo storefront.</small>
+  </footer>
+
+  <dialog class="store-dialog" id="store-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header">
+      <h2 id="dialog-title">Your account</h2>
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <section class="dialog-panel" id="account-panel" hidden>
+      <form class="account-form" id="account-form">
+        <p>Sign in to personalize your ShopHub demo experience.</p>
+        <label for="account-email">Email address</label>
+        <input id="account-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <label for="account-password">Password</label>
+        <input id="account-password" name="password" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required>
+        <button class="dialog-primary" type="submit">Sign in</button>
+        <small>Demo only: sign-in details are not sent or saved, and no real account is created.</small>
+      </form>
+      <div id="signed-in-panel" hidden>
+        <p class="dialog-message">You’re signed in to this demo as <strong id="signed-in-email"></strong>.</p>
+        <button class="dialog-secondary" id="sign-out-button" type="button">Sign out</button>
+      </div>
+    </section>
+    <section class="dialog-panel" id="cart-panel" hidden>
+      <div id="cart-items"></div>
+      <p class="dialog-empty" id="cart-empty">Your cart is empty. Add something you love!</p>
+      <div class="cart-summary" id="cart-summary" hidden>
+        <strong>Total</strong><strong id="cart-total">$0.00</strong>
+      </div>
+      <form class="address-form" id="address-form" hidden>
+        <h3>Delivery address</h3>
+        <p class="address-help">Enter your postal address for delivery. GPS coordinates cannot replace a street address.</p>
+        <div class="detected-location" id="detected-location" hidden>
+          <label for="delivery-coordinates">Detected GPS coordinates</label>
+          <input id="delivery-coordinates" name="coordinates" readonly>
+          <small>Your coordinates stay in this demo page and are included with the demo order.</small>
+        </div>
+        <label for="delivery-name">Full name</label>
+        <input id="delivery-name" name="name" autocomplete="name" required>
+        <label for="delivery-street">Street address</label>
+        <input id="delivery-street" name="street" autocomplete="street-address" required>
+        <div class="address-row">
+          <div>
+            <label for="delivery-city">City</label>
+            <input id="delivery-city" name="city" autocomplete="address-level2" required>
+          </div>
+          <div>
+            <label for="delivery-region">State / Region</label>
+            <input id="delivery-region" name="region" autocomplete="address-level1" required>
+          </div>
+        </div>
+        <div class="address-row">
+          <div>
+            <label for="delivery-postal">Postal code</label>
+            <input id="delivery-postal" name="postal" autocomplete="postal-code" required>
+          </div>
+          <div>
+            <label for="delivery-country">Country</label>
+            <input id="delivery-country" name="country" autocomplete="country-name" required>
+          </div>
+        </div>
+        <fieldset class="payment-method">
+          <legend>Payment method</legend>
+          <label><input type="radio" name="payment" value="Cash on delivery (COD)" checked required> Cash on delivery (COD)</label>
+        </fieldset>
+        <button class="dialog-primary" id="checkout-button" type="submit">Place demo order</button>
+      </form>
+      <p class="dialog-note" id="checkout-note" hidden>This demo records your selected payment method; no real payment is processed.</p>
+    </section>
+    <section class="dialog-panel" id="orders-panel" hidden>
+      <div id="order-list"></div>
+      <p class="dialog-empty" id="orders-empty">You don’t have any demo orders yet.</p>
+    </section>
+  </dialog>
+</body>
+</html>
